@@ -17,7 +17,7 @@
             </div>
 
             <div class="menu-card">
-                <h3>Jugadores</h3>
+                <h3><a href="{{ route('admin.players.index') }}" style="text-decoration: none; color: inherit;">Jugadores</a></h3>
                 <p>Alta, edición y asignación de usuarios del sistema.</p>
             </div>
 

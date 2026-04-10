@@ -78,6 +78,17 @@
             border: 1px solid #cbd5e1;
             border-radius: 8px;
         }
+        select,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+        }      
+        nav[role="navigation"] {
+            margin-top: 16px;
+        }          
         .error {
             color: #b91c1c;
             margin-top: 6px;
