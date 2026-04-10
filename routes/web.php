@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,11 +23,12 @@ Route::middleware('auth')->group(function () {
         return redirect()->route('player.dashboard');
     })->name('dashboard');
 
-    Route::view('/admin/dashboard', 'admin.dashboard')
-        ->middleware('role:admin')
-        ->name('admin.dashboard');
+    Route::prefix('admin')->name('admin.')->middleware('role:admin')->group(function () {
+        Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
+        Route::resource('categories', CategoryController::class)->except('show');
+    });
 
-    Route::view('/player/dashboard', 'player.dashboard')
-        ->middleware('role:player')
-        ->name('player.dashboard');
+    Route::prefix('player')->name('player.')->middleware('role:player')->group(function () {
+        Route::view('/dashboard', 'player.dashboard')->name('dashboard');
+    });
 });

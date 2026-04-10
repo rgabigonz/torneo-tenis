@@ -7,7 +7,7 @@
 
         <div class="grid" style="margin-top: 24px;">
             <div class="menu-card">
-                <h3>Categorías</h3>
+                <h3><a href="{{ route('admin.categories.index') }}" style="text-decoration: none; color: inherit;">Categorías</a></h3>
                 <p>Alta, baja y modificación de categorías.</p>
             </div>
 
