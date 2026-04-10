@@ -12,7 +12,7 @@
             </div>
 
             <div class="menu-card">
-                <h3>Temporadas</h3>
+                <h3><a href="{{ route('admin.seasons.index') }}" style="text-decoration: none; color: inherit;">Temporadas</a></h3>
                 <p>Gestión de temporadas anuales o semestrales.</p>
             </div>
 
